@@ -1,0 +1,9 @@
+name: Release-Workflow
+on: [push]
+jobs:
+  call-continuous-integration-reusable:
+    uses: s-devops-i2/github-reusable-workflows/.github/workflows/release.yml@main
+    with:
+      project_name: expense-frontend
+      npm_install: false
+    secrets: inherit
