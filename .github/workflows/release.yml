@@ -1,7 +1,10 @@
 name: Release-Workflow
-on: [push]
+on:
+  push:
+    tags:
+      - *
 jobs:
-  call-continuous-integration-reusable:
+  call-Release-reusable:
     uses: s-devops-i2/github-reusable-workflows/.github/workflows/release.yml@main
     with:
       project_name: expense-frontend
