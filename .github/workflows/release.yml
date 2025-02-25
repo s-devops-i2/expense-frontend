@@ -9,5 +9,5 @@ jobs:
     with:
       project_name: expense-frontend
       npm_install: false
-
+      release_archive_files: "*"
     secrets: inherit
